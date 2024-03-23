@@ -3,13 +3,13 @@
 @section('content')
 <nav class="mt-3" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ asset('/') }}">Accueil</a></li>
-    <li class="breadcrumb-item"><a href="{{ route('etudiant.index') }}">Étudiants</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Modifier un étudiant</li>
+    <li class="breadcrumb-item"><a href="{{ asset('/') }}">@lang('Home')</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('etudiant.index') }}">@lang('Students')</a></li>
+    <li class="breadcrumb-item active" aria-current="page">@lang('ChangeStudent')</li>
   </ol>
 </nav>
 <section class="pb-4 text-center container">
-    <h1>Modifier un étudiant</h1>
+    <h1>@lang('ChangeStudent')</h1>
 </section>
 @isset($etudiant)
 {{--Ajouter la formulaire--}}

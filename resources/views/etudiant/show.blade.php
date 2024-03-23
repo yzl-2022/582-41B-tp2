@@ -3,13 +3,13 @@
 @section('content')
 <nav class="mt-3" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ asset('/') }}">Accueil</a></li>
-    <li class="breadcrumb-item"><a href="{{ route('etudiant.index') }}">Étudiants</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Étudiant</li>
+    <li class="breadcrumb-item"><a href="{{ asset('/') }}">@lang('Home')</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('etudiant.index') }}">@lang('Students')</a></li>
+    <li class="breadcrumb-item active" aria-current="page">@lang('OneStudent')</li>
   </ol>
 </nav>
 <section class="pb-4 text-center container">
-    <h1>Étudiant</h1>
+    <h1>@lang('OneStudent')</h1>
 </section>
 @isset($etudiant)
 {{--show card--}}
@@ -27,9 +27,9 @@
                 <p class="card-text"><strong>Ville: </strong>{{ $etudiant->ville->nom }}</p>
             </div>
             <div class="card-footer d-flex justify-content-between">
-                <a href="{{ route('etudiant.edit', $etudiant->id) }}" class="btn btn-sm btn-outline-success">Modifier</a>
+                <a href="{{ route('etudiant.edit', $etudiant->id) }}" class="btn btn-sm btn-outline-success">@lang('Change')</a>
                 <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    Supprimer
+                    @lang('Delete')
                 </button>
             </div>
         </div>

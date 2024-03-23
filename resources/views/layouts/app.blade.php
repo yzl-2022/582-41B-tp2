@@ -20,16 +20,25 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link {{ $__env->yieldContent('title') == 'Accueil' ? 'active' : '' }}" aria-current="page" href="{{ asset('/') }}">Accueil</a>
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Accueil' ? 'active' : '' }}" aria-current="page" href="{{ asset('/') }}">@lang('Home')</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link {{ $__env->yieldContent('title') == 'Étudiants' ? 'active' : '' }}" href="{{ route('etudiant.index') }}">Étudiants</a>
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Étudiants' ? 'active' : '' }}" href="{{ route('etudiant.index') }}">@lang('Students')</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link {{ $__env->yieldContent('title') == 'Ajouter étudiant' ? 'active' : '' }}" href="{{ route('etudiant.create') }}">Ajouter étudiant</a>
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Ajouter étudiant' ? 'active' : '' }}" href="{{ route('etudiant.create') }}">@lang('AddStudent')</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Se connecter</a>
+                    <a class="nav-link" aria-disabled="true">@lang('Login')</a>
+                    </li>
+                    <!--dropdown for language-->
+                    <li class="nav-item dropdown">
+                    @php $locale = session()->get('locale'); @endphp
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">@lang('Language') {{ $locale == '' ? '' : "($locale)" }}</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('lang', 'fr') }}">@lang('French')</a></li>
+                            <li><a class="dropdown-item" href="{{ route('lang', 'en') }}">@lang('English')</a></li>
+                        </ul>
                     </li>
                 </ul>
                 </div>

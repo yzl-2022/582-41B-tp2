@@ -3,14 +3,14 @@
 @section('content')
 <nav class="mt-3" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Accueil</li>
+    <li class="breadcrumb-item active" aria-current="page">@lang('Home')</li>
   </ol>
 </nav>
 <div class="p-5 mb-4 bg-body-tertiary rounded-3">
   <div class="container-fluid py-5">
-    <h1 class="display-5 fw-bold">Bienvenue chez la communauté étudiante</h1>
-    <p class="col-md-10 fs-4">Nous sommes toujours ici lorsque vous avez besoin d'accompagnement, d'aide ou de quelqu'un pour partager la joie.</p>
-    <a class="btn btn-primary btn-lg" href="{{ route('etudiant.create') }}">Rejoignez-nous</a>
+    <h1 class="display-5 fw-bold">@lang('home_welcome_text_short')</h1>
+    <p class="col-md-10 fs-4">@lang('home_welcome_text_long')</p>
+    <a class="btn btn-primary btn-lg" href="{{ route('etudiant.create') }}">@lang('JoinUs')</a>
   </div>
 </div>
 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">

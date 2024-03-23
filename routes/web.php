@@ -25,3 +25,6 @@ Route::post('/create/etudiant', [App\Http\Controllers\EtudiantController::class,
 Route::get('/edit/etudiant/{id}', [App\Http\Controllers\EtudiantController::class, 'edit'])->where('id', '[0-9]+')->name('etudiant.edit');
 Route::put('/edit/etudiant/{id}', [App\Http\Controllers\EtudiantController::class, 'update'])->where('id', '[0-9]+')->name('etudiant.update');
 Route::delete('/etudiant/{id}', [App\Http\Controllers\EtudiantController::class, 'destroy'])->where('id', '[0-9]+')->name('etudiant.delete');
+
+/** route pour langue */
+Route::get('/lang/{locale}', [App\Http\Controllers\SetLocaleController::class, 'index'])->name('lang');

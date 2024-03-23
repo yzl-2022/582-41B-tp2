@@ -1,0 +1,19 @@
+{
+    "Login":"Connexion",
+    "Logout":"Déconnexion",
+    "Home":"Accueil",
+    "home_welcome_text_short":"Bienvenue chez la communauté étudiante",
+    "home_welcome_text_long":"Nous sommes toujours ici lorsque vous avez besoin d'accompagnement, d'aide ou de quelqu'un pour partager la joie.",
+    "JoinUs":"Rejoignez-nous",
+    "Students":"Étudiants",
+    "students_empty_text":"Aucun étudiant à afficher!",
+    "AddStudent":"Ajouter étudiant",
+    "ChangeStudent":"Modifier un étudiant",
+    "OneStudent":"Étudiant",
+    "Add":"Ajouter",
+    "Change":"Modifier",
+    "Delete":"Supprimer",
+    "Language":"Langue",
+    "English":"Anglais",
+    "French":"Français"
+}

@@ -3,12 +3,12 @@
 @section('content')
 <nav class="mt-3" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ asset('/') }}">Accueil</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Étudiants</li>
+    <li class="breadcrumb-item"><a href="{{ asset('/') }}">@lang('Home')</a></li>
+    <li class="breadcrumb-item active" aria-current="page">@lang('Students')</li>
   </ol>
 </nav>
 <section class="pb-4 text-center container">
-    <h1>Étudiants</h1>
+    <h1>@lang('Students')</h1>
 </section>
 <div class="album container">
     <div class="row row-cols-md-3">
@@ -27,9 +27,9 @@
             </div>
         </div>
         @empty
-            <div class="alert alert-danger">Aucun étudiant à afficher!</div>
+            <div class="alert alert-danger">@lang('students_empty_text')</div>
         @endforelse
     </div>
-    {{ $etudiants }}
+    @if ($etudiants) {{ $etudiants }} @endif
 </div>
 @endsection

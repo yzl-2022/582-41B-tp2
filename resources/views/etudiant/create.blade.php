@@ -3,12 +3,12 @@
 @section('content')
 <nav class="mt-3" aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ asset('/') }}">Accueil</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Ajouter un nouvel étudiant</li>
+    <li class="breadcrumb-item"><a href="{{ asset('/') }}">@lang('Home')</a></li>
+    <li class="breadcrumb-item active" aria-current="page">@lang('AddStudent')</li>
   </ol>
 </nav>
 <section class="pt-4 text-center container">
-    <h1>Ajouter un nouvel étudiant</h1>
+    <h1>@lang('AddStudent')</h1>
 </section>
 {{--Ajouter la formulaire--}}
 <div class="row justify-content-center mt-5 mb-5">
@@ -75,7 +75,7 @@
                             </div>
                         @endif
                     </div>
-                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                    <button type="submit" class="btn btn-primary">@lang('Add')</button>
                 </form>
             </div>
         </div>

@@ -1,0 +1,19 @@
+{
+    "Login":"Login",
+    "Logout":"Logout",
+    "Home":"Home",
+    "home_welcome_text_short":"Welcome to the student community",
+    "home_welcome_text_long":"We are always here when you need accompany, help or someone to share the happiness.",
+    "JoinUs":"Join us",
+    "Students":"Students",
+    "students_empty_text":"0 student in the list.",
+    "AddStudent":"Add student",
+    "ChangeStudent":"Change student",
+    "OneStudent":"Student",
+    "Add":"Add",
+    "Change":"Change",
+    "Delete":"Delete",
+    "Language":"Language",
+    "English":"English",
+    "French":"French"
+}
