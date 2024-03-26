@@ -67,7 +67,7 @@ class EtudiantController extends Controller
      * @param  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) //why does show(Etudiant $etudiant) return undefined? but show($id) works.
+    public function show($id)
     {
         $etudiant = Etudiant::find($id);
         //dd($etudiant);

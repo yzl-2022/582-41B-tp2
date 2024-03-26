@@ -54,7 +54,7 @@
                         @endif
                     </div>
                     <div class="mb-3">
-                        <label for="date_de_naissance" class="form-label">DateDate de naissance</label>
+                        <label for="date_de_naissance" class="form-label">Date de naissance</label>
                         <input type="date" class="form-control" id="date_de_naissance" name="date_de_naissance" value="{{ old('date_de_naissance') }}" min="1923-01-01" max="2023-12-31">
                         @if ($errors->has('date_de_naissance'))
                             <div class="text-danger mt-2">

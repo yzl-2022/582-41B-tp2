@@ -28,9 +28,31 @@
                     <li class="nav-item">
                     <a class="nav-link {{ $__env->yieldContent('title') == 'Ajouter étudiant' ? 'active' : '' }}" href="{{ route('etudiant.create') }}">@lang('AddStudent')</a>
                     </li>
+                    <!--login-->
+                    @guest
                     <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">@lang('Login')</a>
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Inscription' ? 'active' : '' }}" href="{{ route('user.create') }}">Inscription</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Login' ? 'active' : '' }}" href="{{ route('login') }}">@lang('Login')</a>
+                    </li>
+                    @else
+                    <li class="nav-item">
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Articles' ? 'active' : '' }}" href="{{ route('article.index') }}">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Ajouter article' ? 'active' : '' }}" href="{{ route('article.create') }}">@lang('Add') article</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Documents' ? 'active' : '' }}" href="{{ route('document.index') }}">Documents</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Ajouter document' ? 'active' : '' }}" href="{{ route('document.create') }}">@lang('Add') document</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {{ $__env->yieldContent('title') == 'Logout' ? 'active' : '' }}" href="{{ route('logout') }}">@lang('Logout')</a>
+                    </li>
+                    @endguest
                     <!--dropdown for language-->
                     <li class="nav-item dropdown">
                     @php $locale = session()->get('locale'); @endphp

@@ -27,7 +27,7 @@
             </div>
         </div>
         @empty
-            <div class="alert alert-danger">@lang('students_empty_text')</div>
+            <div class="alert alert-danger col-md-6 mx-auto">@lang('students_empty_text')</div>
         @endforelse
     </div>
     @if ($etudiants) {{ $etudiants }} @endif

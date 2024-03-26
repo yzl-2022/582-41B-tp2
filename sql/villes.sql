@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 23, 2024 at 02:46 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- 主机： 127.0.0.1:3306
+-- 生成日期： 2024-03-25 23:34:19
+-- 服务器版本： 8.0.31
+-- PHP 版本： 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,62 +18,44 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `laravel_tp1`
+-- 数据库： `laravel_tp`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `villes`
+-- 表的结构 `villes`
 --
 
-CREATE TABLE `villes` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nom` varchar(255) NOT NULL,
+DROP TABLE IF EXISTS `villes`;
+CREATE TABLE IF NOT EXISTS `villes` (
+  `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `villes`
+-- 转存表中的数据 `villes`
 --
 
 INSERT INTO `villes` (`id`, `nom`, `created_at`, `updated_at`) VALUES
-(1, 'rem', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(2, 'praesentium', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(3, 'maxime', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(4, 'consectetur', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(5, 'qui', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(6, 'quas', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(7, 'aspernatur', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(8, 'optio', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(9, 'aperiam', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(10, 'qui', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(11, 'nihil', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(12, 'tenetur', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(13, 'distinctio', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(14, 'consequatur', '2024-02-13 22:52:19', '2024-02-13 22:52:19'),
-(15, 'sunt', '2024-02-13 22:52:19', '2024-02-13 22:52:19');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `villes`
---
-ALTER TABLE `villes`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `villes`
---
-ALTER TABLE `villes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+(1, 'Nikitaberg', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(2, 'North Caroleside', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(3, 'North Michaelafurt', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(4, 'North Patrick', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(5, 'Lake Meggieburgh', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(6, 'Port Mattmouth', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(7, 'Port Charliemouth', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(8, 'West Amaraport', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(9, 'Grimesside', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(10, 'Kamrenborough', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(11, 'West Sagemouth', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(12, 'Lake Eldon', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(13, 'Raymondshire', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(14, 'Port Aurelia', '2024-03-23 03:40:42', '2024-03-23 03:40:42'),
+(15, 'North Elyse', '2024-03-23 03:40:42', '2024-03-23 03:40:42');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
